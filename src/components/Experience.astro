@@ -1,0 +1,24 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  company: string;
+  start: string;
+  end: string;
+  tools: string[];
+}
+
+const { title, description, company, start, end } = Astro.props;
+const tools = Astro.props.tools.join(' • ');
+---
+
+<div class="flex flex-row mt-6 mb-10">
+  <div class="basis-1/4 prose prose-sm">
+    {start} - {end}
+  </div>
+  <div class="basis-3/4 prose prose-sm prose-p:-mb-3">
+    <p class="text-primary"><b>{title} - {company}</b></p>
+    <p>{description}</p>
+    <p>{tools}</p>
+  </div>
+</div>

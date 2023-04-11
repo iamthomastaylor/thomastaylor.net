@@ -1,0 +1,18 @@
+---
+export interface Props {
+  name: string;
+  handle: string;
+  url: string;
+}
+
+const { name, handle, url } = Astro.props;
+---
+
+<div class="flex flex-row mb-2">
+  <div class="basis-1/4 prose prose-sm">
+    {name}
+  </div>
+  <div class="text-primary basis-3/4 prose prose-sm">
+    <a class="link link-hover" href={url} target="_blank">{handle}</a>
+  </div>
+</div>
