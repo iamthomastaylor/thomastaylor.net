@@ -8,6 +8,9 @@ module.exports = {
         sm: "500px"
       }
     },
+    fontFamily: {
+      sans: ['Arial']
+    },
 		extend: {},
 	},
   daisyui: {
