@@ -2,22 +2,31 @@
 export interface Props {
   title: string;
   description: string;
-  company: string;
-  start: string;
-  end: string;
   tools: string[];
-}
+  company?: string;
+  end?: string;
+  image?: string;
+  website?: string;
+};
 
-const { title, description, company, start, end } = Astro.props;
+const { description, company, start, end, website, image } = Astro.props;
 const tools = Astro.props.tools.join(' • ');
+const title = company
+  ? `${Astro.props.title} - ${company}`
+  : Astro.props.title;
 ---
 
 <div class="flex flex-row mt-6 mb-10">
   <div class="basis-1/4 prose prose-sm">
-    {start} - {end}
+    {start}{end && ' - ' + end}
   </div>
   <div class="basis-3/4 prose prose-sm prose-p:-mb-3">
-    <p class="text-primary"><b>{title} - {company}</b></p>
+  { image && <img class="-mb-0" src={image} width="50" height="50" aspectRatio={1} alt="{title}"/> }
+  {
+    website
+    ? <p class="text-primary"><a class="link link-hover" href={website} target="_blank"><b>{title} ↗</b></a></p>
+    : <p class="text-primary"><b>{title}</b></p>
+  }
     <p>{description}</p>
     <p>{tools}</p>
   </div>
