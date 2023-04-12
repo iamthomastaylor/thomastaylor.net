@@ -6,51 +6,80 @@ import Link from '../components/Link.astro';
 
 <Layout title="Thomas Taylor | Software Engineer">
   <main>
-    <div class="prose prose-sm prose-h1:-mb-4 mt-14 mb-8">
+    <div class="prose prose-sm prose-h1:-mb-4 mt-14 mb-10">
       <h1>Thomas Taylor</h1>
       <p>Software Engineer</p>
     </div>
-    <div class="prose prose-sm mb-8">
+    <div class="prose prose-sm mb-10">
       <h2>About</h2>
+      <div class="divider"></div>
       <p>Hello, my name is Thomas. I enjoy building scalable product-driven software. I'm interested in infrastructure, DevOps, and data.</p>
     </div>
-    <div class="prose prose-sm mb-8">
+    <div class="prose prose-sm mb-10">
       <h2>Work Experience</h2>
+      <div class="divider"></div>
       <Experience
         title="Software Engineer"
-        description="Some description here"
+        description="Building the best data-driven platform for the banking industry"
         company="nCino"
         start="2022"
         end="Present"
-        tools={['TS', 'AWS', 'AWS CDK', 'Databricks', 'Glue']}
+        tools={['TS', 'AWS', 'AWS CDK', 'Serverless', 'Databricks']}
+        website="https://ncino.com"
       />
       <Experience
         title="Software Engineer"
-        description="Some description here"
-        company="nCino"
-        start="2022"
-        end="Present"
-        tools={['TS', 'AWS', 'AWS CDK', 'Databricks', 'Glue']}
+        description="Contributed to an internal application that streamlined Kubernetes deployments. Managed Terraform Enterprise modules. Led an initiative for securing Terraform deployments using sentinel policies."
+        company="Blend"
+        start="2021"
+        end="2022"
+        tools={['Go', 'AWS', 'Terraform', 'Kubernetes']}
+        website="https://blend.com"
       />
       <Experience
-        title="Software Engineer"
-        description="Some description here"
+        title="DevOps Engineer"
+        description="Migrated CloudFormation to AWS CDK. Designed and implemented an internal application that streamlined versioned deployments into customer environments. Designed reuseable / modular infrastructure. Pioneered CodePipeline & CodeBuild automated processes."
         company="nCino"
-        start="2022"
-        end="Present"
-        tools={['TS', 'AWS', 'AWS CDK', 'Databricks', 'Glue']}
+        start="2020"
+        end="2021"
+        tools={['Python', 'TS', 'AWS', 'AWS CDK', 'Serverless']}
+        website="https://ncino.com"
       />
       <Experience
-        title="Software Engineer"
-        description="Some description here"
+        title="Cloud Operations Specialist"
+        description="Automated manual ops tasks using API Gateways. Administered AWS Management and Governance tools: AWS IAM, AWS Organizations, service control policies, etc."
         company="nCino"
-        start="2022"
-        end="Present"
-        tools={['TS', 'AWS', 'AWS CDK', 'Databricks', 'Glue']}
+        start="2018"
+        end="2020"
+        tools={['Python', 'AWS', 'CloudFormation', 'Serverless']}
+        website="https://ncino.com"
       />
     </div>
-    <div class="prose prose-sm mb-8">
+    <div class="prose prose-sm mb-10">
+      <h2>Side Projects</h2>
+      <div class="divider"></div>
+      <Experience
+        title="how.wtf"
+        description="A microblog sharing helpful articles about Python, Bash, Cloud Infrastructure, and other development topics."
+        start="2021"
+        end="Present"
+        tools={['Hugo', 'AWS']}
+        website="https://how.wtf"
+        image='/howwtf.png'
+      />
+      <Experience
+        title="stewart.gg"
+        description="A discord bot in 5,000+ servers with thousands of daily active users. It was multipurpose with over 50 commands relating to gambling, economy, games, and more."
+        start="2020"
+        end="2021"
+        tools={['JS', 'DigitalOcean', 'DynamoDB', 'Redis']}
+        image='/stewart.png'
+      />
+
+    </div>
+    <div class="prose prose-sm mb-10">
       <h2>Links</h2>
+      <div class="divider"></div>
       <Link name="Blog" handle="how.wtf" url="https://how.wtf" />
       <Link name="GitHub" handle="@thomasnotfound" url="https://github.com/thomasnotfound" />
       <Link name="LinkedIn" handle="@thomasnotfound" url="https://linkedin.com/in/thomasnotfound" />
